@@ -24,13 +24,13 @@ const protectedRoutes = {
 }
 
 const effects = {
-    mask: 'cursor',             // none | cursor | topLeft | topRight | bottomLeft | bottomRight
+    mask: 'centre',             // none | cursor | topLeft | topRight | bottomLeft | bottomRight
     gradient: {
         display: true,
-        opacity: 0.4            // 0 - 1
+        opacity: 0.3            // 0 - 1
     },
     dots: {
-        display: true,
+        display: false,
         opacity: 0.4,           // 0 - 1
         size: '24'              // 2 | 4 | 8 | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56 | 634
     },
@@ -43,8 +43,8 @@ const style = {
     theme:       'dark',         // dark | light
     neutral:     'gray',         // sand | gray | slate
     brand:       'emerald',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    accent:      'indigo',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    solid:       'contrast',     // color | contrast
+    accent:      'emerald',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    solid:       'color',     // color | contrast
     solidStyle:  'flat',         // flat | plastic
     border:      'playful',      // rounded | playful | conservative
     surface:     'translucent',  // filled | translucent

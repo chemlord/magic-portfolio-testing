@@ -172,7 +172,7 @@ export default function About(
                                     icon="chevronRight"/>
                             </Flex>
                         )}
-                        <Heading
+                        <Heading marginBottom="12"
                             className={styles.textAlign}
                             variant="display-strong-xl">
                             {person.name}
@@ -248,7 +248,7 @@ export default function About(
                                             variant="body-default-s"
                                             onBackground="brand-weak"
                                             marginBottom="m">
-                                            {experience.role}
+                                            <strong style={{ fontWeight: 500 }}>{experience.role}</strong>
                                         </Text>
                                         <Flex
                                             as="ul"
@@ -264,7 +264,7 @@ export default function About(
                                         </Flex>
                                         {experience.images.length > 0 && (
                                             <Flex
-                                                fillWidth paddingTop="m" paddingLeft="40"
+                                                fillWidth paddingTop="m" paddingLeft="55"
                                                 wrap>
                                                 {experience.images.map((image, index) => (
                                                     <Flex
@@ -289,7 +289,7 @@ export default function About(
                         </>
                     )}
 
-                    { about.studies.display && (
+{ about.studies.display && (
                         <>
                             <Heading
                                 as="h2"
@@ -304,18 +304,63 @@ export default function About(
                                 {about.studies.institutions.map((institution, index) => (
                                     <Flex
                                         key={`${institution.name}-${index}`}
-                                        fillWidth gap="4"
+                                        fillWidth
                                         direction="column">
+                                        <Flex
+                                            fillWidth
+                                            justifyContent="space-between"
+                                            alignItems="flex-end"
+                                            marginBottom="4">
+                                            <Text
+                                                id={institution.name}
+                                                variant="heading-strong-l">
+                                                {institution.name}
+                                            </Text>
+                                            <Text
+                                                variant="heading-default-xs"
+                                                onBackground="neutral-weak">
+                                                {institution.timeframe}
+                                            </Text>
+                                        </Flex>
                                         <Text
-                                            id={institution.name}
-                                            variant="heading-strong-l">
-                                            {institution.name}
+                                            variant="body-default-s"
+                                            onBackground="brand-weak"
+                                            marginBottom="m">
+                                            <strong style={{ fontWeight: 500 }}>{institution.description}</strong>
                                         </Text>
-                                        <Text
-                                            variant="heading-default-xs"
-                                            onBackground="neutral-weak">
-                                            {institution.description}
-                                        </Text>
+                                        <Flex
+                                            as="ul"
+                                            direction="column" gap="16">
+                                            {institution.achievements.map((achievement, index) => (
+                                                <Text
+                                                    as="li"
+                                                    variant="body-default-m"
+                                                    key={index}>
+                                                    {achievement}
+                                                </Text>
+                                            ))}
+                                        </Flex>
+                                        {institution.images.length > 0 && (
+                                            <Flex
+                                                fillWidth paddingTop="m" paddingLeft="40"
+                                                wrap>
+                                                {institution.images.map((image, index) => (
+                                                    <Flex
+                                                        key={index}
+                                                        border="neutral-medium"
+                                                        borderStyle="solid-1"
+                                                        radius="m"
+                                                        minWidth={image.width} height={image.height}>
+                                                        <SmartImage
+                                                            enlarge
+                                                            radius="m"
+                                                            sizes={image.width.toString()}
+                                                            alt={image.alt}
+                                                            src={image.src}/>
+                                                    </Flex>
+                                                ))}
+                                            </Flex>
+                                        )}
                                     </Flex>
                                 ))}
                             </Flex>

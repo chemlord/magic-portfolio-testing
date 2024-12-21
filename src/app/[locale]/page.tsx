@@ -75,53 +75,69 @@ export default function Home(
 				}}
 			/>
 			<Flex
-				fillWidth
-				direction="column"
-				paddingY="l" gap="m">
-					<Flex
-						direction="column"
-						fillWidth maxWidth="s">
-						<RevealFx
-							translateY="4" fillWidth justifyContent="flex-start" paddingBottom="m">
-							<Heading
-								wrap="balance"
-								variant="display-strong-l">
-								{home.headline}
-							</Heading>
-						</RevealFx>
-						<RevealFx
-							translateY="8" delay={0.2} fillWidth justifyContent="flex-start" paddingBottom="m">
-							<Text
-								wrap="balance"
-								onBackground="neutral-weak"
-								variant="heading-default-xl">
-								{home.subline}
-							</Text>
-						</RevealFx>
-						<RevealFx translateY="12" delay={0.4}>
-							<Flex fillWidth>
-								<Button
-									id="about"
-									data-border="rounded"
-									href={`/${locale}/about`}
-									variant="tertiary"
-									size="m">
-									<Flex
-										gap="8"
-										alignItems="center">
-										{about.avatar.display && (
-											<Avatar
-												style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
-												src={person.avatar}
-												size="m"/>
-											)}
-											{t("about.title")}
-											<Arrow trigger="#about"/>
-									</Flex>
-								</Button>
-							</Flex>
-						</RevealFx>
-					</Flex>
+    fillWidth
+    direction="column"
+    paddingY="l"
+    gap="m"
+    alignItems="center"> {/* Centering the entire column */}
+    <Flex
+        direction="column"
+        fillWidth
+        maxWidth="s"
+        alignItems="center"> {/* Centering content in the inner column */}
+        <RevealFx
+            translateY="4"
+            fillWidth
+            justifyContent="center"
+            paddingBottom="m">
+            <Heading
+                wrap="balance"
+                variant="display-strong-l"
+                align="center"> {/* Center align text */}
+                {home.headline}
+            </Heading>
+        </RevealFx>
+        <RevealFx
+    translateY="8"
+    delay={0.2}
+    fillWidth
+    justifyContent="center"
+    paddingBottom="m">
+    <Flex fillWidth justifyContent="center" alignItems="center"> {/* Ensures horizontal centering */}
+        <Text
+            align="center"
+            wrap="balance"
+            onBackground="neutral-weak"
+            variant="heading-default-xl">
+            {home.subline}
+        </Text>
+    </Flex>
+</RevealFx>
+        <RevealFx translateY="12" delay={0.4}>
+            <Flex fillWidth justifyContent="center">
+                <Button
+                    id="about"
+                    data-border="rounded"
+                    href={`/${locale}/about`}
+                    variant="tertiary"
+                    size="m">
+                    <Flex
+                        gap="8"
+                        alignItems="center">
+                        {about.avatar.display && (
+                            <Avatar
+                                style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
+                                src={person.avatar}
+                                size="m"/>
+                        )}
+                        {t("about.title")}
+                        <Arrow trigger="#about"/>
+                    </Flex>
+                </Button>
+            </Flex>
+        </RevealFx>
+    </Flex>
+
 				
 			</Flex>
 			<RevealFx translateY="16" delay={0.6}>

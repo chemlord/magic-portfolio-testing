@@ -1,21 +1,21 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Devraj',
+    lastName:  'Bagchi',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Biochemistry and Molecular Biology',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'America/Toronto',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: ['English', 'French']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
     display: true,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
+    description: <>I'm a Trent University student majoring in Biochemistry and Molecular Biology. I have a keen interest in Synthetic Organic Chemistry, particularly Carbonyl chemistry. I'm hoping to expand my knowledge into other scientific specialities. I'm also interested in Front-End Development as a hobby.</>
 }
 
 const social = [
@@ -39,7 +39,7 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:devrajbagchi@trentu.ca',
     },
 ]
 
@@ -47,8 +47,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Biochemist Seeking New Opportunities</>,
+    subline: <>Hey I'm Devraj, a Biochemistry and Molecular Biology Student at <InlineCode>Trent University</InlineCode>, where I'm hoping to gain meaningful experiences in Chemistry and Biology.</>
 }
 
 const about = {
@@ -56,7 +56,7 @@ const about = {
     title: 'About me',
     description: `Meet ${person.name}, ${person.role} from ${person.location}`,
     tableOfContent: {
-        display: true,
+        display: false,
         subItems: false
     },
     avatar: {
@@ -68,20 +68,57 @@ const about = {
     },
     intro: {
         display: true,
-        title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        title: 'About Me',
+        description: <>I'm a Trent University student majoring in Biochemistry and Molecular Biology. I have a keen interest in Medicinal and Pharmaceutical Chemistry. I'm hoping to expand my knowledge into other scientific specialities. I'm also interested in Front-End Development as a hobby.</>
     },
     work: {
         display: true, // set to false to hide this section
-        title: 'Work Experience',
+        title: 'Education',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Trent University',
+                timeframe: '',
+                role: 'Candidate for BSc Honours in Biochemistry & Molecular Biology',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Relevant Courses: Medicine and Chemistry, Adv. Synthetic Organic Chemistry Bio Applications, Calculus I & II, Introductory Chemistry I & II, Foundations of Cell and Molecular Biology, Intro Organic Chemistry I & II, Basic Research Methods & Stats</>,
+                    <>Awards: Trent Entrance Scholarship 2020, Dean's Honour Roll 2020-21 and 2023</>,
+                    <>Clubs/Societies: Trent Hemoglobal (Co-President), Trent Varsity Fencer (2021-2022)</>,
+                ],
+                images: [ // optional: leave the array empty if you don't want to display images
+                    {
+                        src: '/images/projects/project-01/trentuhemoglobal.jpg',
+                        alt: 'Once UI Project',
+                        width: 16,
+                        height: 9
+                    }
+                ]
+            },
+            {
+                company: 'Donald A. Wilson Secondary School',
+                timeframe: '',
+                role: 'High School Student',
+                achievements: [
+                    <>Grade: 84% (A-)</>,
+                    <>Awards: Honor Roll</>,
+                    <>Clubs/Societies: STEM Design Team (Director, Chemistry), Chess Club (Secretary), Rugby Team, Swim Team</>
+                ],
+                images: [ ]
+            }
+        ]
+    },
+    studies: {
+        display: true, // set to false to hide this section
+        title: 'Work Experience',
+        institutions: [
+            {
+                name: 'Academic Assistant for CHEM 3110',
+                description: <>Trent University</>,
+                timeframe: 'January 2025 – April 2025',
+                achievements: [
+                    <>Will grade student papers and reports.</>,
+                    <>Manage students in the Laboratory to perform experiments safely.</>,
+                    <>Assist students with questions regarding Lab or course content.</>,
+
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
@@ -93,38 +130,36 @@ const about = {
                 ]
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                name: 'Referee',
+                description: <>Whitby FC</>,
+                timeframe: 'May 2023 – September 2023',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Ensured fair play and safety with quick decisions.</>,
+                    <>Managed game dynamics and resolved conflicts.</>,
+                    <>Improved officiating through training.</>,
                 ],
                 images: [ ]
-            }
-        ]
-    },
-    studies: {
-        display: true, // set to false to hide this section
-        title: 'Studies',
-        institutions: [
-            {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'HMR/Deli Clerk',
+                description: <>Loblaws Companies Ltd</>,
+                timeframe: 'April 2021 – December 2021',
+                achievements: [
+                    <>Ensured quality operations through teamwork and strong listening skills.</>,
+                    <>Adhered to safety and workplace protocols.</>,
+                    <>Handled machinery to complete tasks.</>,
+                ],
+                images: []
             }
         ]
     },
     technical: {
         display: true, // set to false to hide this section
-        title: 'Technical skills',
+        title: 'Relevant Skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+                title: 'Web Development',
+                description: <>HTML | CSS | JavaScript | Typescript | React | Next.js | XMS | XML | Java | Bootstrap | Python | Tailwind CSS | npm</>,
                 // optional: leave the array empty if you don't want to display images
                 images: [
                     {
@@ -142,8 +177,8 @@ const about = {
                 ]
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+                title: 'Web Development',
+                description: <>HTML | CSS | JavaScript | Typescript | React | Next.js | XMS | XML | Java | Bootstrap | Python | Tailwind CSS | npm</>,
                 // optional: leave the array empty if you don't want to display images
                 images: [
                     {
@@ -160,7 +195,7 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about design and tech...',
+    title: 'Writing about Chemistry and Biology...',
     description: `Read what ${person.name} has been up to recently`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route
@@ -181,22 +216,22 @@ const gallery = {
     // Images from https://pexels.com
     images: [
         { 
-            src: '/images/gallery/img-01.jpg', 
+            src: '/images/gallery/Cyalume.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-02.jpg', 
+            src: '/images/gallery/ironsolutions.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-03.jpg', 
+            src: '/images/gallery/Grginardmid.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-04.jpg', 
+            src: '/images/gallery/PresentationMedChem.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
@@ -206,7 +241,7 @@ const gallery = {
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-06.jpg', 
+            src: '/images/gallery/Wittig.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
@@ -216,7 +251,7 @@ const gallery = {
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-08.jpg', 
+            src: '/images/gallery/Wittigcooled.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
