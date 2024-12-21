@@ -264,8 +264,8 @@ export default function About(
                                         </Flex>
                                         {experience.images.length > 0 && (
                                             <Flex
-                                                fillWidth paddingTop="m" paddingLeft="55"
-                                                wrap>
+                                            fillWidth paddingTop="m" gap="12"
+                                            wrap>
                                                 {experience.images.map((image, index) => (
                                                     <Flex
                                                         key={index}
@@ -342,8 +342,8 @@ export default function About(
                                         </Flex>
                                         {institution.images.length > 0 && (
                                             <Flex
-                                                fillWidth paddingTop="m" paddingLeft="40"
-                                                wrap>
+                                            fillWidth paddingTop="m" gap="12"
+                                            wrap>
                                                 {institution.images.map((image, index) => (
                                                     <Flex
                                                         key={index}

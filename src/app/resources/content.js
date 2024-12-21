@@ -24,7 +24,7 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://www.linkedin.com/in/devbagchi/',
     },
     {
         name: 'LinkedIn',
@@ -32,9 +32,9 @@ const social = [
         link: 'https://www.linkedin.com/company/once-ui/',
     },
     {
-        name: 'X',
-        icon: 'x',
-        link: '',
+        name: 'Discord',
+        icon: 'discord',
+        link: 'https://discordapp.com/users/386380595271565312',
     },
     {
         name: 'Email',
@@ -88,6 +88,12 @@ const about = {
                     {
                         src: '/images/projects/project-01/trentuhemoglobal.jpg',
                         alt: 'Once UI Project',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/cover-02.jpg',
+                        alt: 'Project image',
                         width: 16,
                         height: 9
                     }
