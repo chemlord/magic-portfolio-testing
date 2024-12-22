@@ -9,7 +9,7 @@ const person = {
     role:      'Biochemistry and Molecular Biology',
     avatar:    '/images/avatar.jpg',
     location:  'America/Toronto',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'French']  // optional: Leave the array empty if you don't want to display languages
+    languages: []  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
@@ -63,7 +63,7 @@ const about = {
         display: true
     },
     calendar: {
-        display: true,
+        display: false,
         link: 'https://cal.com'
     },
     intro: {
@@ -174,15 +174,16 @@ const about = {
     },
     technical: {
         display: true, // set to false to hide this section
-        title: 'Relevant Skills',
+        title: 'Projects',
         skills: [
             {
-                title: 'Web Development',
-                description: <>HTML | CSS | JavaScript | Typescript | React | Next.js | XMS | XML | Java | Bootstrap | Python | Tailwind CSS | npm</>,
+                title: 'Reaction Repo',
+                tags: ['Next.js', 'Organic Chemistry', 'Chemical Education','Reaction Mechanisms'], // Tags for this skill
+                description: <>Reaction Repo is a comprehensive organic chemistry database aimed at providing free, accessible resources for students, featuring reaction mechanisms, detailed overviews, citations in a documentation format. It addresses the issues of misinformation, high subscription costs, and lack of quality practice material found in existing platforms like ReactionFlash, Master Organic Chemistry, and ChemSteps.</>,
                 // optional: leave the array empty if you don't want to display images
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-02.jpg',
+                        src: '/images/projects/project-01/reactionrepo1.png',
                         alt: 'Project image',
                         width: 16,
                         height: 9
@@ -197,6 +198,7 @@ const about = {
             },
             {
                 title: 'Web Development',
+                tags: ['React', 'CSS', 'JavaScript'], // Tags for this skill
                 description: <>HTML | CSS | JavaScript | Typescript | React | Next.js | XMS | XML | Java | Bootstrap | Python | Tailwind CSS | npm</>,
                 // optional: leave the array empty if you don't want to display images
                 images: [

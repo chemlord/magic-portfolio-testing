@@ -387,6 +387,24 @@ export default function About(
                                             variant="heading-strong-l">
                                             {skill.title}
                                         </Text>
+                                        {skill.tags && skill.tags.length > 0 && (
+    <Flex
+        wrap
+        gap="4"
+        // Adjust spacing between title and tags (closer)
+        style={{ paddingTop: '4px' }}
+        // Adjust spacing between tags and description (further apart)
+        paddingBottom="xs">
+        {skill.tags.map((tag, tagIndex) => (
+            <Tag
+                key={`tag-${tagIndex}`}
+                variant="gradient"
+                size="m"
+                label={tag}
+            />
+        ))}
+    </Flex>
+)}
                                         <Text
                                             variant="body-default-m"
                                             onBackground="neutral-weak">
