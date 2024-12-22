@@ -73,15 +73,17 @@ export default function Blog(
 					}),
 				}}
 			/>
-            <Heading
+            <Heading 
                 marginBottom="l"
                 variant="display-strong-s">
-                {blog.title}
+                <div style={{ textAlign: 'center' }}>
+   				 {blog.title}
+				</div>
             </Heading>
 			<Flex
 				fillWidth flex={1} direction="column">
-				<Posts range={[1,3]} locale={locale} thumbnail/>
-				<Posts range={[4]} columns="2" locale={locale}/>
+				<Posts range={[1,2]} locale={locale} thumbnail/>
+				<Posts range={[1,4]} columns="2" locale={locale}/>
 			</Flex>
             {newsletter.display && (
                 <Mailchimp newsletter={newsletter} />
