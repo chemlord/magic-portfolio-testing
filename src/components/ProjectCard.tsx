@@ -70,7 +70,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                         aspectRatio="16 / 9"
                         src={images[activeIndex]}
                         style={{
-                            border: '1px solid var(--neutral-alpha-weak)',
+                            background: 'none',
+                            border: '0px solid var(--neutral-alpha-weak)',
                             ...(images.length > 1 && {
                                 cursor: 'pointer',
                             }),

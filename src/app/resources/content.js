@@ -13,7 +13,7 @@ const person = {
 }
 
 const newsletter = {
-    display: true,
+    display: false,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
     description: <>I'm a Trent University student majoring in Biochemistry and Molecular Biology. I have a keen interest in Synthetic Organic Chemistry, particularly Carbonyl chemistry. I'm hoping to expand my knowledge into other scientific specialities. I'm also interested in Front-End Development as a hobby.</>
 }
@@ -92,7 +92,7 @@ const about = {
                         height: 9
                     },
                     {
-                        src: '/images/projects/project-01/cover-02.jpg',
+                        src: '/images/projects/project-01/labphoto.png',
                         alt: 'Project image',
                         width: 16,
                         height: 9
@@ -108,7 +108,20 @@ const about = {
                     <>Awards: Honor Roll</>,
                     <>Clubs/Societies: STEM Design Team (Director, Chemistry), Chess Club (Secretary), Rugby Team, Swim Team</>
                 ],
-                images: [ ]
+                images: [ 
+                    {
+                        src: '/images/projects/project-01/hsgrad2.png',
+                        alt: 'Once UI Project',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/hsgrad1.png',
+                        alt: 'Project image',
+                        width: 16,
+                        height: 9
+                    }
+                ]
             }
         ]
     },
@@ -242,7 +255,7 @@ const gallery = {
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-05.jpg', 
+            src: '/images/projects/project-01/labphoto.png', 
             alt: 'image',
             orientation: 'horizontal'
         },
