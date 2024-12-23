@@ -1,4 +1,4 @@
-import { Avatar, Button, Flex, Heading, Icon, IconButton, SmartImage, Tag, Text } from '@/once-ui/components';
+import { Avatar, Button, Flex, Heading, Icon, IconButton, SmartImage, SmartLink, Tag, Text } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
 import TableOfContents from '@/components/about/TableOfContents';
 import styles from '@/components/about/about.module.scss'
@@ -119,7 +119,7 @@ export default function About(
                             alignItems="center">
                             <Icon
                                 onBackground="accent-weak"
-                                name="globe"/>
+                                name="leaf"/>
                             {person.location}
                         </Flex>
                         { person.languages.length > 0 && (
@@ -392,7 +392,7 @@ export default function About(
         wrap
         gap="4"
         // Adjust spacing between title and tags (closer)
-        style={{ paddingTop: '4px' }}
+        style={{ paddingTop: '6px' }}
         // Adjust spacing between tags and description (further apart)
         paddingBottom="xs">
         {skill.tags.map((tag, tagIndex) => (
@@ -410,6 +410,18 @@ export default function About(
                                             onBackground="neutral-weak">
                                             {skill.description}
                                         </Text>
+                                        {skill.link && (
+                        <Flex
+                        paddingTop="s"
+                        paddingLeft="0" // Adjust paddingLeft to match skill.title alignment
+                    >
+                            <SmartLink
+                                href={skill.link.href}
+                                iconSize="xs">
+                                {skill.link.label}
+                            </SmartLink>
+                        </Flex>
+                    )}
                                         {skill.images && skill.images.length > 0 && (
                                             <Flex
                                                 fillWidth paddingTop="m" gap="12"

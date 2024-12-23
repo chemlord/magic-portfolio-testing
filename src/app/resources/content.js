@@ -180,6 +180,10 @@ const about = {
                 title: 'Reaction Repo',
                 tags: ['Next.js', 'Organic Chemistry', 'Chemical Education','Reaction Mechanisms'], // Tags for this skill
                 description: <>Reaction Repo is a comprehensive organic chemistry database aimed at providing free, accessible resources for students, featuring reaction mechanisms, detailed overviews, citations in a documentation format. It addresses the issues of misinformation, high subscription costs, and lack of quality practice material found in existing platforms like ReactionFlash, Master Organic Chemistry, and ChemSteps.</>,
+                link: {
+                    href: 'https://reactionrepo.mintlify.app/introduction', // Example link for Reaction Repo
+                    label: 'View Reaction Repo'
+                },
                 // optional: leave the array empty if you don't want to display images
                 images: [
                     {
@@ -190,20 +194,6 @@ const about = {
                     },
                     {
                         src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
-            },
-            {
-                title: 'Web Development',
-                tags: ['React', 'CSS', 'JavaScript'], // Tags for this skill
-                description: <>HTML | CSS | JavaScript | Typescript | React | Next.js | XMS | XML | Java | Bootstrap | Python | Tailwind CSS | npm</>,
-                // optional: leave the array empty if you don't want to display images
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
                         alt: 'Project image',
                         width: 16,
                         height: 9
