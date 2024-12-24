@@ -141,7 +141,7 @@ const about = {
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
-                        src: '/images/projects/project-01/cover-01.jpg',
+                        src: '/images/projects/project-01/lab2.png',
                         alt: 'Once UI Project',
                         width: 16,
                         height: 9
@@ -182,7 +182,7 @@ const about = {
                 description: <>Reaction Repo is a comprehensive organic chemistry database aimed at providing free, accessible resources for students, featuring reaction mechanisms, detailed overviews, citations in a documentation format. It addresses the issues of misinformation, high subscription costs, and lack of quality practice material found in existing platforms like ReactionFlash, Master Organic Chemistry, and ChemSteps.</>,
                 link: {
                     href: 'https://reactionrepo.mintlify.app/introduction', // Example link for Reaction Repo
-                    label: 'View Reaction Repo'
+                    label: 'Try it out!'
                 },
                 // optional: leave the array empty if you don't want to display images
                 images: [
@@ -193,7 +193,7 @@ const about = {
                         height: 9
                     },
                     {
-                        src: '/images/projects/project-01/cover-03.jpg',
+                        src: '/images/projects/project-01/reactionrepo2.png',
                         alt: 'Project image',
                         width: 16,
                         height: 9
@@ -206,7 +206,7 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about Recent Developments in Chemistry and my Personal Life',
+    title: 'Reactions and Reflections: Writing about Chemistry, Biology, and Beyond',
     description: `Read what ${person.name} has been up to recently`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route
@@ -247,52 +247,12 @@ const gallery = {
             orientation: 'horizontal'
         },
         { 
-            src: '/images/projects/project-01/labphoto.png', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
             src: '/images/gallery/Wittig.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-07.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/Wittigcooled.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-09.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-10.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-11.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-12.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-13.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
-        { 
-            src: '/images/gallery/img-14.jpg', 
+            src: '/images/projects/project-01/labphoto.png', 
             alt: 'image',
             orientation: 'horizontal'
         },

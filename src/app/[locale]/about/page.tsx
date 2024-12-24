@@ -251,17 +251,27 @@ export default function About(
                                             <strong style={{ fontWeight: 500 }}>{experience.role}</strong>
                                         </Text>
                                         <Flex
-                                            as="ul"
-                                            direction="column" gap="16">
-                                            {experience.achievements.map((achievement: string, index: any) => (
-                                                <Text
-                                                    as="li"
-                                                    variant="body-default-m"
-                                                    key={`${experience.company}-${index}`}>
-                                                    {achievement}
-                                                </Text>
-                                            ))}
-                                        </Flex>
+    fillWidth
+    paddingTop="0"
+    paddingLeft="0"
+    gap="12"
+    direction="column"
+    as="ul"
+    style={{ listStylePosition: 'outside' }}>
+    {experience.achievements.map((achievement: string, index: any) => (
+        <Text
+            as="li"
+            variant="body-default-m"
+            key={`${experience.company}-${index}`}
+            style={{
+                marginLeft: '1.5em', // Creates space for the bullet
+                textIndent: '-1.4em', // Pulls the bullet outside the text flow
+                lineHeight: '1.5', // Ensures consistent spacing
+            }}>
+            {achievement}
+        </Text>
+    ))}
+</Flex>
                                         {experience.images.length > 0 && (
                                             <Flex
                                             fillWidth paddingTop="m" gap="12"
@@ -329,17 +339,27 @@ export default function About(
                                             <strong style={{ fontWeight: 500 }}>{institution.description}</strong>
                                         </Text>
                                         <Flex
-                                            as="ul"
-                                            direction="column" gap="16">
-                                            {institution.achievements.map((achievement, index) => (
-                                                <Text
-                                                    as="li"
-                                                    variant="body-default-m"
-                                                    key={index}>
-                                                    {achievement}
-                                                </Text>
-                                            ))}
-                                        </Flex>
+    as="ul"
+    fillWidth
+    paddingTop="0"
+    paddingLeft="0"
+    gap="12"
+    direction="column"
+    style={{ listStylePosition: 'outside' }}>
+    {institution.achievements.map((achievement, index) => (
+        <Text
+            as="li"
+            variant="body-default-m"
+            key={index}
+            style={{
+                marginLeft: '1.5em', // Creates space for the bullet
+                textIndent: '-1.4em', // Pulls the bullet outside the text flow
+                lineHeight: '1.5', // Ensures consistent spacing
+            }}>
+            {achievement}
+        </Text>
+    ))}
+</Flex>
                                         {institution.images.length > 0 && (
                                             <Flex
                                             fillWidth paddingTop="m" gap="12"

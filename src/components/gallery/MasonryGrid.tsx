@@ -30,6 +30,8 @@ export default function MasonryGrid() {
                     src={image.src}
                     alt={image.alt}
                     className={styles.gridItem}
+                    enlarge={true} // Enables the zoom-in feature
+                    objectFit="cover" // Adjust object fit as per your preference
                 />
             ))}
         </Masonry>
