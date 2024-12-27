@@ -82,7 +82,7 @@ export default function Blog(
             </Heading>
 			<Flex
 				fillWidth flex={1} direction="row">
-				<Posts range={[1,2]} locale={locale} columns="1" thumbnail/>
+				<Posts range={[1,3]} locale={locale} columns="1" thumbnail/>
 				<Posts range={[0,1]} locale={locale}/>
 			</Flex>
             {newsletter.display && (

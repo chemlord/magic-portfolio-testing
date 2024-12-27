@@ -352,8 +352,8 @@ export default function About(
             variant="body-default-m"
             key={index}
             style={{
-                marginLeft: '1.5em', // Creates space for the bullet
-                textIndent: '-1.4em', // Pulls the bullet outside the text flow
+                marginLeft: '1.0em', // Creates space for the bullet
+                textIndent: '-1.0em', // Pulls the bullet outside the text flow
                 lineHeight: '1.5', // Ensures consistent spacing
             }}>
             {achievement}
