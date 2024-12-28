@@ -28,6 +28,7 @@ export interface BackgroundProps {
     dots?: DotsProps;
     lines?: LinesProps;
     mask?: MaskType;
+    svgBackground?: string; // Added SVG background property
     className?: string;
     style?: React.CSSProperties;
 }
@@ -57,6 +58,7 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
         dots = {},
         lines = {},
         mask = 'none',
+        svgBackground ='images/gallery/hex5.svg', // Include the SVG background
         className,
         style
     }, forwardedRef) => {
@@ -163,6 +165,19 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(
 
         return (
             <>
+                {svgBackground && (
+                    <div
+                        ref={backgroundRef}
+                        className={className}
+                        style={{
+                            ...commonStyles,
+                            backgroundImage: `url(${svgBackground})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'cover',
+                            ...maskStyle(),
+                        }}
+                    />
+                )}
                 {gradient.display && (
                     <div
                         ref={backgroundRef}
