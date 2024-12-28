@@ -8,7 +8,7 @@ const person = {
     },
     role:      'Biochemistry and Molecular Biology',
     avatar:    '/images/avatar.jpg',
-    location:  'America/Toronto',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    location:  'Peterborough, Ontario',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: []  // optional: Leave the array empty if you don't want to display languages
 }
 
