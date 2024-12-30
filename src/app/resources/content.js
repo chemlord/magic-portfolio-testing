@@ -319,8 +319,8 @@ const gallery = {
             src: '/images/gallery/Grginardmid.jpg', 
             alt: 'image',
             orientation: 'vertical',
-            caption: 'Grignard Reaction performed through Reflux',
-            details: 'Performed in Fall 2023',
+            caption: 'Grignard Reaction',
+            details: 'Performed through Reflux in Fall 2023',
         },
         { 
             src: '/images/gallery/ecoli.png', 
@@ -333,15 +333,15 @@ const gallery = {
             src: '/images/gallery/Wittig.jpg', 
             alt: 'image',
             orientation: 'vertical',
-            caption: 'Wittig Reaction performed through Reflux',
-            details: 'Performed in Fall 2023',
+            caption: 'Wittig Reaction',
+            details: 'Performed through Reflux in Fall 2023',
         },
         { 
             src: '/images/projects/project-01/labphoto.png', 
             alt: 'image',
             orientation: 'horizontal',
             caption: 'CHEM 3110 End of Year Lab',
-            details: 'Taken in 2023 when I was taking CHEM 3110',
+            details: 'Taken in 2024 during my enrollment in CHEM 3110.',
         },
     ]
 }

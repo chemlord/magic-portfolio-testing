@@ -35,7 +35,7 @@ export default function MasonryGrid() {
                         onMouseEnter={() => setShowCaption(false)}
                         onMouseLeave={() => setShowCaption(true)}
                         style={{
-                            transition: "background 0.5s ease-in-out", // Smooth fade effect
+                            transition: "background 0.5s ease-in-out",
                         }}>
                         <SmartImage
                             radius="m"
@@ -54,25 +54,34 @@ export default function MasonryGrid() {
                                 fillHeight
                                 zIndex={1}
                                 direction="column"
-                                justifyContent="flex-end"
-                                alignItems="center"
-                                gap="8"
+                                justifyContent="flex-end" // Align content at the bottom
+                                alignItems="center" // Center horizontally
                                 textVariant="label-default-s"
-                                paddingBottom="32"
-                                paddingX="24"
+                                paddingBottom="16px" // Add spacing at the bottom
                                 style={{
                                     color: image.textColor || "white",
                                     background: "rgba(0, 0, 0, 0.4)", // Slightly less black
                                     borderRadius: "8px",
                                     opacity: showCaption ? 1 : 0,
-                                    transition: "opacity 0.5s ease-in-out", // Smooth fade-in/out effect
+                                    transition: "opacity 0.5s ease-in-out",
+                                    padding: "28px",
                                 }}>
                                 <LetterFx
-                                    style={{ fontWeight: "bold" }} // Bold title
+                                    style={{
+                                        fontWeight: "bold",
+                                        textAlign: "center",
+                                        marginBottom: "4px", // Add slight spacing below the title
+                                    }}
                                     speed="medium">
                                     {image.caption}
                                 </LetterFx>
-                                <LetterFx speed="medium">{image.details}</LetterFx>
+                                <LetterFx
+                                    style={{
+                                        textAlign: "center",
+                                    }}
+                                    speed="medium">
+                                    {image.details}
+                                </LetterFx>
                             </Flex>
                         )}
                     </Flex>
