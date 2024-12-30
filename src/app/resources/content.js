@@ -105,7 +105,7 @@ const about = {
                 role: 'High School Student',
                 achievements: [
                     <>Grade: 84% (A-)</>,
-                    <>Awards: Honor Roll</>,
+                    <>Awards: Honour Roll</>,
                     <>Clubs/Societies: STEM Design Team (Director, Chemistry), Chess Club (Secretary), Rugby Team, Swim Team</>
                 ],
                 images: [ 
@@ -304,32 +304,44 @@ const gallery = {
         { 
             src: '/images/gallery/Cyalume.jpg', 
             alt: 'image',
-            orientation: 'vertical'
+            orientation: 'vertical',
+            caption: 'Cyalume',
+            details: 'Synthesized in Fall 2023',
         },
         { 
             src: '/images/gallery/ironsolutions.jpg', 
             alt: 'image',
-            orientation: 'horizontal'
+            orientation: 'horizontal',
+            caption: 'Iron Ion Solutions at Various Concentrations',
+            details: 'Colours are dependant on Concentration',
         },
         { 
             src: '/images/gallery/Grginardmid.jpg', 
             alt: 'image',
-            orientation: 'vertical'
+            orientation: 'vertical',
+            caption: 'Grignard Reaction performed through Reflux',
+            details: 'Performed in Fall 2023',
         },
         { 
             src: '/images/gallery/ecoli.png', 
             alt: 'image',
-            orientation: 'horizontal'
+            orientation: 'horizontal',
+            caption: 'Cultured E. Coli (1.5g)',
+            details: 'Provided by the Trent Department of Chemistry',
         },
         { 
             src: '/images/gallery/Wittig.jpg', 
             alt: 'image',
-            orientation: 'vertical'
+            orientation: 'vertical',
+            caption: 'Wittig Reaction performed through Reflux',
+            details: 'Performed in Fall 2023',
         },
         { 
             src: '/images/projects/project-01/labphoto.png', 
             alt: 'image',
-            orientation: 'horizontal'
+            orientation: 'horizontal',
+            caption: 'CHEM 3110 End of Year Lab',
+            details: 'Taken in 2023 when I was taking CHEM 3110',
         },
     ]
 }
