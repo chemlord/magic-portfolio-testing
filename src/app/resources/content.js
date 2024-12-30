@@ -210,7 +210,7 @@ const about = {
                 },
                 {
                     title: 'Web Development',
-                    tags: ['Go', 'HTML', 'XMS', 'XML', 'Tailwind', 'Bootstrap', 'CSS', 'JavaScript', 'Java', 'Python', 'Leaflet', 'JSON', 'TOML', 'YAML'], // Tags for this skill
+                    tags: ['Go', 'HTML', 'XMS', 'XML', 'Tailwind', 'Bootstrap', 'CSS', 'JavaScript', 'Java', 'Python', 'Leaflet', 'JSON', 'TOML', 'YAML', 'Next.js'], // Tags for this skill
                     description: <>Skilled in building and designing websites using technologies like HTML, CSS, JavaScript, Tailwind, Bootstrap, and Python. Experience includes creating my Reaction Repo site and previous iterations of my portfolio, leveraging tools such as Go, Leaflet, and various data formats like JSON, TOML, and YAML.</>,
                     // optional: leave the array empty if you don't want to display images
                     link: {
