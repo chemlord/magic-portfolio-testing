@@ -178,8 +178,8 @@ const about = {
             skills: [
                 {
                     title: 'Laboratory Skills',
-                    tags: ['TLC', 'FT-IR', '¹H NMR', 'GC-MS','HPLC','IEC','SEC','UV-Vis','SDS Page','Biohazard Handling','Aspetic Technique','Micropipetting','Reflux','SOP/WI Adherence','Separation','pH Testing','Rotary Evaporation','Buffer Preparation','Bradford Assay','Spot Assay'], // Tags for this skill
-                    description: <>I have two years of lab experience, averaging 12 hours weekly, with expertise in TLC, FT-IR, ¹H NMR, GC-MS, HPLC, IEC, SEC, and UV-Vis spectroscopy. Skilled in aseptic techniques, biohazard handling (E. coli, katG catalase-peroxidase), safety protocols (SOPs, WHMIS), micropipetting, reflux, separations, rotary evaporation, buffer preparation, pH testing, SDS-PAGE, Bradford Assay, and Spot Assay. Capable of managing physical tasks (45+ pounds) while ensuring precise and efficient workflows.</>,
+                    tags: ['TLC', 'FT-IR', '¹H NMR', 'GC-MS','HPLC','IEC','SEC','UV-Vis','SDS Page','Biohazard Handling','Aseptic Techniques','Micropipetting','Reflux','SOP/WI Adherence','Separation','pH Testing','Rotary Evaporation','Buffer Preparation','Bradford Assay','Spot Assay', 'Nessler Assay', 'Dialysis'], // Tags for this skill
+                    description: <>Two years of lab experience, averaging twelve hours weekly, with expertise in TLC, FT-IR, ¹H NMR, GC-MS, HPLC, IEC, SEC, and UV-Vis spectroscopy. Skilled in aseptic techniques, biohazard handling (E. coli, katG catalase-peroxidase), safety protocols (SOPs/WIs, WHMIS), micropipetting, reflux, separations, rotary evaporation, buffer preparation, pH testing, SDS-PAGE, various Assays. Additionally, capable of managing physical tasks such as lifting and carrying (45+ pounds).</>,
                     // optional: leave the array empty if you don't want to display images
                 },
                 {
@@ -188,6 +188,18 @@ const about = {
                     description: <>Experienced in using PyMOL to create detailed molecular presentations and ChemDraw for designing and visualizing chemical structures, utilized extensively in academic work and personal projects such as the ReactionRepo documentation and my Ganaxolone presentation for CHEM 4110: Medicine and Chemistry.</>,
                     // optional: leave the array empty if you don't want to display images
                     images: [
+                        {
+                            src: '/images/gallery/PresentationMedChem.jpg',
+                            alt: 'Project image',
+                            width: 16,
+                            height: 9
+                        },
+                        {
+                            src: '/images/gallery/old4.png',
+                            alt: 'Project image',
+                            width: 16,
+                            height: 9
+                        },
                         {
                             src: '/images/gallery/pymol.png',
                             alt: 'Project image',
@@ -305,7 +317,7 @@ const gallery = {
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/PresentationMedChem.jpg', 
+            src: '/images/gallery/ecoli.png', 
             alt: 'image',
             orientation: 'horizontal'
         },
