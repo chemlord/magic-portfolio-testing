@@ -387,12 +387,96 @@ export default function About(
                         </>
                     )}
 
+{ about.lab.display && (
+                        <>
+                            <Heading
+                                as="h2"
+                                id={about.lab.title}
+                                variant="display-strong-s"
+                                marginBottom="m">
+                                {about.lab.title}
+                            </Heading>
+                            <Flex
+                                direction="column"
+                                fillWidth gap="l">
+                                {about.lab.skills.map((skill, index) => (
+                                    <Flex
+                                        key={`${skill}-${index}`}
+                                        fillWidth gap="4"
+                                        direction="column">
+                                        <Text
+                                            variant="heading-strong-l">
+                                            {skill.title}
+                                        </Text>
+                                        {skill.tags && skill.tags.length > 0 && (
+    <Flex
+        wrap
+        gap="4"
+        // Adjust spacing between title and tags (closer)
+        style={{ paddingTop: '6px' }}
+        // Adjust spacing between tags and description (further apart)
+        paddingBottom="xs">
+        {skill.tags.map((tag, tagIndex) => (
+            <Tag
+                key={`tag-${tagIndex}`}
+                variant="gradient"
+                size="m"
+                label={tag}
+            />
+        ))}
+    </Flex>
+)}
+                                        <Text
+                                            variant="body-default-m"
+                                            onBackground="neutral-weak">
+                                            {skill.description}
+                                        </Text>
+                                        {skill.link && (
+                        <Flex
+                        paddingTop="s"
+                        paddingLeft="0" // Adjust paddingLeft to match skill.title alignment
+                    >
+                            <SmartLink
+                                href={skill.link.href}
+                                iconSize="xs">
+                                {skill.link.label}
+                            </SmartLink>
+                        </Flex>
+                    )}
+                                        {skill.images && skill.images.length > 0 && (
+                                            <Flex
+                                                fillWidth paddingTop="m" gap="12"
+                                                wrap>
+                                                {skill.images.map((image, index) => (
+                                                    <Flex
+                                                        key={index}
+                                                        border="neutral-medium"
+                                                        borderStyle="solid-1"
+                                                        radius="m"
+                                                        minWidth={image.width} height={image.height}>
+                                                        <SmartImage
+                                                            enlarge
+                                                            radius="m"
+                                                            sizes={image.width.toString()}
+                                                            alt={image.alt}
+                                                            src={image.src}/>
+                                                    </Flex>
+                                                ))}
+                                            </Flex>
+                                        )}
+                                    </Flex>
+                                ))}
+                            </Flex>
+                        </>
+                    )}
+
                     { about.technical.display && (
                         <>
                             <Heading
                                 as="h2"
                                 id={about.technical.title}
-                                variant="display-strong-s" marginBottom="40">
+                                variant="display-strong-s"
+                                marginBottom="m" style={{ marginTop: '50px' }}>
                                 {about.technical.title}
                             </Heading>
                             <Flex

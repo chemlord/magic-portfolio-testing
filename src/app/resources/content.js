@@ -172,37 +172,100 @@ const about = {
             }
         ]
     },
-    technical: {
-        display: true, // set to false to hide this section
-        title: 'Projects',
-        skills: [
-            {
-                title: 'Reaction Repo',
-                tags: ['Next.js', 'Organic Chemistry', 'Chemical Education','Reaction Mechanisms'], // Tags for this skill
-                description: <>Reaction Repo is a comprehensive organic chemistry database aimed at providing free, accessible resources for students, featuring reaction mechanisms, detailed overviews, citations in a documentation format. It addresses the issues of misinformation, high subscription costs, and lack of quality practice material found in existing platforms like ReactionFlash, Master Organic Chemistry, and ChemSteps.</>,
-                link: {
-                    href: 'https://reactionrepo.mintlify.app/introduction', // Example link for Reaction Repo
-                    label: 'Try it out!'
+        lab: {
+            display: true, // set to false to hide this section
+            title: 'Skills',
+            skills: [
+                {
+                    title: 'Laboratory Skills',
+                    tags: ['TLC', 'FT-IR', '¹H NMR', 'GC-MS','HPLC','IEC','SEC','UV-Vis','SDS Page','Biohazard Handling','Aspetic Technique','Micropipetting','Reflux','SOP/WI Adherence','Separation','pH Testing','Rotary Evaporation','Buffer Preparation','Bradford Assay','Spot Assay'], // Tags for this skill
+                    description: <>I have two years of lab experience, averaging 12 hours weekly, with expertise in TLC, FT-IR, ¹H NMR, GC-MS, HPLC, IEC, SEC, and UV-Vis spectroscopy. Skilled in aseptic techniques, biohazard handling (E. coli, katG catalase-peroxidase), safety protocols (SOPs, WHMIS), micropipetting, reflux, separations, rotary evaporation, buffer preparation, pH testing, SDS-PAGE, Bradford Assay, and Spot Assay. Capable of managing physical tasks (45+ pounds) while ensuring precise and efficient workflows.</>,
+                    // optional: leave the array empty if you don't want to display images
                 },
-                // optional: leave the array empty if you don't want to display images
-                images: [
-                    {
-                        src: '/images/projects/project-01/reactionrepo1.png',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
+                {
+                    title: 'Computational Chemistry',
+                    tags: ['PyMOL', 'ChemDraw'], // Tags for this skill
+                    description: <>Experienced in using PyMOL to create detailed molecular presentations and ChemDraw for designing and visualizing chemical structures, utilized extensively in academic work and personal projects such as the ReactionRepo documentation and my Ganaxolone presentation for CHEM 4110: Medicine and Chemistry.</>,
+                    // optional: leave the array empty if you don't want to display images
+                    images: [
+                        {
+                            src: '/images/gallery/pymol.png',
+                            alt: 'Project image',
+                            width: 16,
+                            height: 9
+                        },
+                        {
+                            src: '/images/gallery/chemdraww.png',
+                            alt: 'Project image',
+                            width: 16,
+                            height: 9
+                        }
+                    ]
+                },
+                {
+                    title: 'Productivity and Communication Tools Expertise',
+                    tags: ['MS Office Suites','Google Workspace','Adobe Acrobat','Zoom','MS Teams','Google Meet'], // Tags for this skill
+                    description: <>Highly proficient in MS Office Suite (Word, Excel, PowerPoint, Publisher, Outlook), Google Workspace (Docs, Sheets, Slides, Drive, Calendar), and Adobe Acrobat for efficient document management and collaboration. Experienced with communication platforms such as Zoom, MS Teams, and Google Meet for virtual meetings and team coordination.</>,
+                    // optional: leave the array empty if you don't want to display images
+                },
+                {
+                    title: 'Web Development',
+                    tags: ['Go', 'HTML', 'XMS', 'XML', 'Tailwind', 'Bootstrap', 'CSS', 'JavaScript', 'Java', 'Python', 'Leaflet', 'JSON', 'TOML', 'YAML'], // Tags for this skill
+                    description: <>Skilled in building and designing websites using technologies like HTML, CSS, JavaScript, Tailwind, Bootstrap, and Python. Experience includes creating my Reaction Repo site and previous iterations of my portfolio, leveraging tools such as Go, Leaflet, and various data formats like JSON, TOML, and YAML.</>,
+                    // optional: leave the array empty if you don't want to display images
+                    link: {
+                        href: 'https://chemlord.github.io/portotest/', // Example link for Reaction Repo
+                        label: 'View a previous version of my portfolio.'
                     },
-                    {
-                        src: '/images/projects/project-01/reactionrepo2.png',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
+                    images: [
+                        {
+                            src: '/images/gallery/oldport.png',
+                            alt: 'Project image',
+                            width: 16,
+                            height: 9
+                        },
+                        {
+                            src: '/images/gallery/oldold.png',
+                            alt: 'Project image',
+                            width: 16,
+                            height: 9
+                        }
+                    ]
+                }
+            ]
+        },
+        technical: {
+            display: true, // set to false to hide this section
+            title: 'Projects',
+            skills: [
+                {
+                    title: 'Reaction Repo',
+                    tags: ['Next.js', 'Organic Chemistry', 'Chemical Education', 'Reaction Mechanisms'], // Tags for this skill
+                    description: <>Reaction Repo is a comprehensive organic chemistry database aimed at providing free, accessible resources for students, featuring reaction mechanisms, detailed overviews, citations in a documentation format. It addresses the issues of misinformation, high subscription costs, and lack of quality practice material found in existing platforms like ReactionFlash, Master Organic Chemistry, and ChemSteps. All diagrams were made using ChemDraw Ultra 12.0.</>,
+                    link: {
+                        href: 'https://reactionrepo.mintlify.app/introduction', // Example link for Reaction Repo
+                        label: 'Try it out!'
                     },
-                ]
-            }
-        ]
+                    // optional: leave the array empty if you don't want to display images
+                    images: [
+                        {
+                            src: '/images/projects/project-01/reactionrepo1.png',
+                            alt: 'Project image',
+                            width: 16,
+                            height: 9
+                        },
+                        {
+                            src: '/images/projects/project-01/reactionrepo2.png',
+                            alt: 'Project image',
+                            width: 16,
+                            height: 9
+                        }
+                    ]
+                }
+            ]
+        }
     }
-}
+    
 
 const blog = {
     label: 'Blog',
