@@ -57,7 +57,7 @@ export default function MasonryGrid() {
                                 justifyContent="flex-end" // Align content at the bottom
                                 alignItems="center" // Center horizontally
                                 textVariant="label-default-s"
-                                paddingBottom="16px" // Add spacing at the bottom
+                                paddingBottom="xs" // Add spacing at the bottom
                                 style={{
                                     color: image.textColor || "white",
                                     background: "rgba(0, 0, 0, 0.4)", // Slightly less black
@@ -70,7 +70,7 @@ export default function MasonryGrid() {
                                     style={{
                                         fontWeight: "bold",
                                         textAlign: "center",
-                                        marginBottom: "4px", // Add slight spacing below the title
+                                        marginBottom: "3px", // Add slight spacing below the title
                                     }}
                                     speed="medium">
                                     {image.caption}
