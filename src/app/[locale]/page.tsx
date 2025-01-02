@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow } from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, SmartImage } from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -108,7 +108,7 @@ export default function Home(
             align="center"
             wrap="balance"
             onBackground="neutral-weak"
-            variant="heading-default-l">
+            variant="heading-default-m">
             {home.subline}
         </Text>
     </Flex>
@@ -141,11 +141,17 @@ export default function Home(
 			
 			</Flex>
 			<RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1]} locale={locale}/>
-				{ newsletter.display &&
+			<SmartImage
+  src="/images/projects/project-01/hopefully.png"
+  alt="Image description"
+  aspectRatio="16/9"
+  radius="l"
+  objectFit="cover"
+/>
+			</RevealFx>
+			{ newsletter.display &&
 				<Mailchimp newsletter={newsletter} />
 			}
-			</RevealFx>
 		</Flex>
 	);
 }
