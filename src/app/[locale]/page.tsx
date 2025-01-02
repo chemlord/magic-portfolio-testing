@@ -142,8 +142,6 @@ export default function Home(
 			</Flex>
 			<RevealFx translateY="16" delay={0.6}>
 				<Projects range={[1]} locale={locale}/>
-			</RevealFx>
-			<RevealFx translateY="16" delay={0.6}>
 				{ newsletter.display &&
 				<Mailchimp newsletter={newsletter} />
 			}
