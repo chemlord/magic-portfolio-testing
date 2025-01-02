@@ -1,4 +1,4 @@
-import { InlineCode } from "@/once-ui/components";
+import { InlineCode, SmartLink } from "@/once-ui/components";
 
 const person = {
     firstName: 'Devraj',
@@ -47,8 +47,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Academic Portfolio showcasing my work and experiences in ${person.role}`,
-    headline: <>Biochemist Seeking New Opportunities</>,
-    subline: <>Hey I'm Devraj, a Biochemistry and Molecular Biology Student at <InlineCode>Trent University</InlineCode>, where I'm hoping to gain meaningful experiences in Chemistry and Biology.</>
+    headline: <>Biochemist Seeking New Possibilities</>,
+    subline: <>Hi I'm Devraj, a Biochemistry and Molecular Biology Student at <InlineCode>Trent University</InlineCode>, with a passion in Medicinal Chemistry, specifically, Drug Discovery and Design. My goal is to gain experience in Chemistry and Biology to contribute to the future of Pharmaceuticals.</>
 }
 
 const about = {
@@ -69,7 +69,7 @@ const about = {
     intro: {
         display: true,
         title: 'About Me',
-        description: <>I'm a Trent University student majoring in Biochemistry and Molecular Biology. I have a keen interest in Medicinal and Pharmaceutical Chemistry. I'm hoping to expand my knowledge into other scientific specialities. I'm also interested in Front-End Development as a hobby.</>
+        description: <>I'm a Biochemistry and Molecular Biology student at Trent University with a passion for Medicinal Chemistry, particularly Drug Discovery and Design. I’m eager to explore new frontiers in Chemistry and Biology while continually expanding my knowledge. Outside the lab, I enjoy channeling my creativity into front-end development as a fun and rewarding hobby.</>
     },
     work: {
         display: true, // set to false to hide this section
@@ -185,7 +185,7 @@ const about = {
                 {
                     title: 'Computational Chemistry',
                     tags: ['PyMOL', 'ChemDraw'], // Tags for this skill
-                    description: <>Experienced in using PyMOL to create detailed molecular presentations and ChemDraw for designing and visualizing chemical structures, utilized extensively in academic work and personal projects such as the ReactionRepo documentation and my Ganaxolone presentation for CHEM 4110: Medicine and Chemistry.</>,
+                    description: <>Experienced in using PyMOL to create detailed molecular presentations and ChemDraw for designing and visualizing chemical structures, utilized extensively in academic work and personal projects such as the ReactionRepo documentation and my<SmartLink href="https://www.devthechemist.com/blog/ganaxolone-anti-seizure-medication" iconSize="xs">Ganaxolone presentation</SmartLink>for CHEM 4110: Medicine and Chemistry.</>,
                     // optional: leave the array empty if you don't want to display images
                     images: [
                         {
@@ -223,12 +223,8 @@ const about = {
                 {
                     title: 'Web Development',
                     tags: ['Go', 'HTML', 'XMS', 'XML', 'Tailwind', 'Bootstrap', 'CSS', 'JavaScript', 'Java', 'Python', 'Leaflet', 'JSON', 'TOML', 'YAML', 'Next.js'], // Tags for this skill
-                    description: <>Skilled in building and designing websites using technologies like HTML, CSS, JavaScript, Tailwind, Bootstrap, and Python. Experience includes creating my Reaction Repo site and previous iterations of my portfolio, leveraging tools such as Go, Leaflet, and various data formats like JSON, TOML, and YAML.</>,
+                    description: <>Skilled in building and designing websites using technologies like HTML, CSS, JavaScript, Tailwind, Bootstrap, and Python. Experience includes creating my Reaction Repo site and<SmartLink href="https://chemlord.github.io/portotest/" iconSize="xs" >previous iterations of my portfolio</SmartLink>leveraging tools such as Go, Leaflet, and various data formats like JSON, TOML, and YAML.</>,
                     // optional: leave the array empty if you don't want to display images
-                    link: {
-                        href: 'https://chemlord.github.io/portotest/', // Example link for Reaction Repo
-                        label: 'View a previous version of my portfolio.'
-                    },
                     images: [
                         {
                             src: '/images/gallery/oldport.png',
@@ -253,11 +249,7 @@ const about = {
                 {
                     title: 'Reaction Repo',
                     tags: ['Next.js', 'Organic Chemistry', 'Chemical Education', 'Reaction Mechanisms'], // Tags for this skill
-                    description: <>Reaction Repo is a comprehensive organic chemistry database aimed at providing free, accessible resources for students, featuring reaction mechanisms, detailed overviews, citations in a documentation format. It addresses the issues of misinformation, high subscription costs, and lack of quality practice material found in existing platforms like ReactionFlash, Master Organic Chemistry, and ChemSteps. All diagrams were made using ChemDraw Ultra 12.0.</>,
-                    link: {
-                        href: 'https://reactionrepo.mintlify.app/introduction', // Example link for Reaction Repo
-                        label: 'Try it out!'
-                    },
+                    description: <>Reaction Repo is a comprehensive organic chemistry database aimed at providing free, accessible resources for students, featuring reaction mechanisms, detailed overviews, citations in a documentation format. It addresses the issues of misinformation, high subscription costs, and lack of quality practice material found in existing platforms like ReactionFlash, Master Organic Chemistry, and ChemSteps. All diagrams were made using ChemDraw Ultra 12.0.<SmartLink href="https://reactionrepo.mintlify.app/introduction" iconSize="xs" >Try it out here!</SmartLink></>,
                     // optional: leave the array empty if you don't want to display images
                     images: [
                         {

@@ -1,6 +1,6 @@
 ---
 title: "Goodbye Old Portfolio! Hello Once UI!"
-publishedAt: "2024-12-27"
+publishedAt: "2024-12-18"
 image: "/images/gallery/old2.png"
 summary: "It was better than HTML."
 tag: "Tutorial"
@@ -8,13 +8,13 @@ tag: "Tutorial"
 
 ![Old Portfolio Homepage](/images/gallery/old2.png)
 
-After using my previous portfolio for a couple of months, I have decided to upgrade my portfolio using Once UI.
+After using my previous portfolio for a couple of months, I decided to upgrade my portfolio using Once UI.
 
-I joined the [Design Engineers Club Discord](https://discord.com/invite/5EyAQ4eNdS) and they were extremely helpful to me. In this post, I will go over changes I made to my site over the magic portfolio template and how you can replicate it.
+I joined the [Design Engineers Club Discord](https://discord.com/invite/5EyAQ4eNdS), and they were extremely helpful. In this post, I will go over the changes I made to my site using the Magic Portfolio template and how you can replicate it.
 
-## Problems with my Previous Portfolio
+## Problems with My Previous Portfolio
 
-I coded my previous portfolio myself using HTML and CSS. It was not very flexible to changes and lacked a modern look. Additionally, some information presented was questionable when placed under scrutiny such as:
+I coded my previous portfolio myself using HTML and CSS. It was not very flexible to changes and lacked a modern look. Additionally, some information presented was questionable when scrutinized, such as:
 
 ![Old Portfolio](/images/gallery/old3.png)
 
@@ -22,18 +22,362 @@ I coded my previous portfolio myself using HTML and CSS. It was not very flexibl
 
 ![Old Portfolio](/images/gallery/outdated.png) 
 
-There are several issues, including the inability to verify or quantify claims and statistics, as these metrics often lack concrete evidence. Other challenges include noticeable page breaks and inconsistencies with SVG backgrounds. It would be more appropriate to address these in an "About Me" section. Furthermore, attempting to add more projects or initiatives ultimately caused my site to break. Therefore it was necessary to retire it.
+There were several issues, including the inability to verify or quantify claims and statistics, as these metrics often lacked concrete evidence. Other challenges included noticeable page breaks and inconsistencies with SVG backgrounds. It would have been more appropriate to address these in an "About Me" section. Furthermore, attempting to add more projects or initiatives ultimately caused my site to break. Therefore, it was necessary to retire it.
 
-## How I made my Portfolio using Once UI
+## How I Made My Portfolio Using Once UI
 
-### 1. Deploy using Vercel
+### 1. Deploy Using Vercel
 
-![Vercel](/images/gallery/vercel1.png) First step is to deploy the Magic Portfolio using Vercel. This step is quite simple and only requires you to link your Github Account to Vercel.
+![Vercel](/images/gallery/vercel1.png)
 
-This step is mapped out very well by Vercel itself and is very self explanatory.
+The first step is to deploy the Magic Portfolio using Vercel. This step is quite simple and only requires you to link your GitHub account to Vercel.
 
-You can deploy and even view the Demo to see if you like it here: [Magic Portfolio](https://vercel.com/templates/next.js/magic-portfolio-for-next-js)
+This step is well-mapped out by Vercel and is self-explanatory.
 
-### 2. Work in Progress
+You can deploy and even view the demo to see if you like it here: [Magic Portfolio](https://vercel.com/templates/next.js/magic-portfolio-for-next-js).
 
-Please check again later when this is done.
+### 2. Edit Your Style
+
+![Vercel](/images/gallery/quickstart1.png)
+
+Once deployed, open your Codespaces and edit the styles to match your preferences.
+
+![Vercel](/images/gallery/quickstart2.png)
+
+You can edit this in the `config.js` file and change colors and themes based on your preferences.
+
+![Vercel](/images/gallery/quickstart3.png)
+
+You can also modify the background to remove the dotted pattern or replace it with lines. Alternatively, you can opt for no background and use SVG backgrounds like I did.
+
+### 3. Add a Background
+
+![Vercel](/images/gallery/quickstart4.png)
+
+To add an SVG background, go to your `once-ui` folder, then `components`, and edit `Background.tsx` as shown below:
+
+<CodeBlock
+    className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: `'use client';
+
+import React, { CSSProperties, forwardRef, useEffect, useRef, useState } from 'react';
+import { SpacingToken } from '../types';
+
+function setRef<T>(ref: React.Ref<T> | undefined, value: T | null) {
+    if (typeof ref === 'function') {
+        ref(value);
+    } else if (ref && 'current' in ref) {
+        (ref as React.MutableRefObject<T | null>).current = value;
+    }
+}
+
+export interface MaskOptions {
+    none: 'none';
+    cursor: 'cursor';
+    topLeft: 'topLeft';
+    topRight: 'topRight';
+    bottomLeft: 'bottomLeft';
+    bottomRight: 'bottomRight';
+}
+
+type MaskType = keyof MaskOptions;
+
+export interface BackgroundProps {
+    position?: CSSProperties['position'];
+    gradient?: GradientProps;
+    dots?: DotsProps;
+    lines?: LinesProps;
+    mask?: MaskType;
+    svgBackground?: string; // Added SVG background property
+    className?: string;
+    style?: React.CSSProperties;
+}
+
+export interface GradientProps {
+    display?: boolean;
+    opacity?: number;
+}
+
+export interface DotsProps {
+    display?: boolean;
+    opacity?: number;
+    color?: string;
+    size?: SpacingToken;
+}
+
+export interface LinesProps {
+    display?: boolean;
+    opacity?: number;
+    size?: SpacingToken;
+}
+
+const Background = forwardRef<HTMLDivElement, BackgroundProps>(
+    ({
+        position = 'fixed',
+        gradient = {},
+        dots = {},
+        lines = {},
+        mask = 'none',
+        svgBackground ='images/gallery/hex5.svg', // Include the SVG background
+        className,
+        style
+    }, forwardedRef) => {
+        const dotsColor = dots.color ?? 'brand-on-background-weak';
+        const dotsSize = dots.size ?? '16';
+
+        const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+        const [smoothPosition, setSmoothPosition] = useState({ x: 0, y: 0 });
+        const maskSize = 1200;
+        const backgroundRef = useRef<HTMLDivElement>(null);
+
+        useEffect(() => {
+            setRef(forwardedRef, backgroundRef.current);
+        }, [forwardedRef]);
+
+        useEffect(() => {
+            const handleMouseMove = (event: MouseEvent) => {
+                if (backgroundRef.current) {
+                    const rect = backgroundRef.current.getBoundingClientRect();
+                    setCursorPosition({
+                        x: event.clientX - rect.left,
+                        y: event.clientY - rect.top,
+                    });
+                }
+            };
+
+            document.addEventListener('mousemove', handleMouseMove);
+
+            return () => {
+                document.removeEventListener('mousemove', handleMouseMove);
+            };
+        }, []);
+
+        useEffect(() => {
+            let animationFrameId: number;
+
+            const updateSmoothPosition = () => {
+                setSmoothPosition((prev) => {
+                    const dx = cursorPosition.x - prev.x;
+                    const dy = cursorPosition.y - prev.y;
+                    const easingFactor = 0.05;
+
+                    return {
+                        x: Math.round(prev.x + dx * easingFactor),
+                        y: Math.round(prev.y + dy * easingFactor),
+                    };
+                });
+                animationFrameId = requestAnimationFrame(updateSmoothPosition);
+            };
+
+            if (mask === 'cursor') {
+                animationFrameId = requestAnimationFrame(updateSmoothPosition);
+            }
+
+            return () => {
+                cancelAnimationFrame(animationFrameId);
+            };
+        }, [cursorPosition, mask]);
+
+        const commonStyles: CSSProperties = {
+            position,
+            top: '0',
+            left: '0',
+            zIndex: '0',
+            width: '100%',
+            height: '100%',
+            pointerEvents: 'none',
+            ...style,
+        };
+
+        const maskStyle = (): CSSProperties => {
+            switch (mask) {
+                case 'none':
+                    return { maskImage: 'none' };
+                case 'cursor':
+                    return {
+                        maskImage: \`radial-gradient(circle \${maskSize / 2}px at \${smoothPosition.x}px \${smoothPosition.y}px, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%)\`,
+                        maskSize: '100% 100%',
+                    };
+                case 'topLeft':
+                    return {
+                        maskImage: \`radial-gradient(circle \${maskSize / 2}px at 0% 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%)\`,
+                        maskSize: '100% 100%',
+                    };
+                case 'topRight':
+                    return {
+                        maskImage: \`radial-gradient(circle \${maskSize / 2}px at 100% 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%)\`,
+                        maskSize: '100% 100%',
+                    };
+                case 'bottomLeft':
+                    return {
+                        maskImage: \`radial-gradient(circle \${maskSize / 2}px at 0% 100%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%)\`,
+                        maskSize: '100% 100%',
+                    };
+                case 'bottomRight':
+                    return {
+                        maskImage: \`radial-gradient(circle \${maskSize / 2}px at 100% 100%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%)\`,
+                        maskSize: '100% 100%',
+                    };
+                default:
+                    return {};
+            }
+        };
+
+        return (
+            <>
+                {svgBackground && (
+                    <div
+                        ref={backgroundRef}
+                        className={className}
+                        style={{
+                            ...commonStyles,
+                            backgroundImage: \`url(\${svgBackground})\`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'cover',
+                            ...maskStyle(),
+                        }}
+                    />
+                )}
+            </>
+        );
+    }
+);
+
+Background.displayName = 'Background';
+
+export { Background };`,
+            label: 'Background Component',
+            language: 'tsx',
+        },
+    ]}
+    copyButton
+/>
+
+![Vercel](/images/gallery/quickstart5.png)
+
+I used [bgjar](https://bgjar.com/) for my background, as it’s free and allows for flexible customization. I chose hexagons.
+
+![Vercel](/images/gallery/quickstart6.png)
+
+I made the background a light green with a transparent undertone, so it is a subtle addition to my portfolio.
+
+With that, place your SVG in the `images` folder and set the image location in `Background.tsx`.
+
+### 4. Centering Title Text for the Homepage (Optional)
+
+If you want to center the landing page text like those on SaaS pages, this is for you.
+
+![Vercel](/images/gallery/quickstart7.png)
+
+To do this, go to your `page.tsx` in your `locale` folder and replace lines 52 to 126 with the following:
+
+<CodeBlock
+    className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: `<Flex
+    maxWidth="m" fillWidth gap="xl"
+    direction="column" alignItems="center">
+    <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebPage',
+                name: home.title,
+                description: home.description,
+                url: \`https://\${baseURL}\`,
+                image: \`\${baseURL}/og?title=\${encodeURIComponent(home.title)}\`,
+                publisher: {
+                    '@type': 'Person',
+                    name: person.name,
+                    image: {
+                        '@type': 'ImageObject',
+                        url: \`\${baseURL}\${person.avatar}\`,
+                    },
+                },
+            }),
+        }}
+    />
+    <Flex
+        fillWidth
+        direction="column"
+        paddingY="l"
+        gap="m"
+        alignItems="center">
+        <Flex
+            direction="column"
+            fillWidth
+            maxWidth="s"
+            alignItems="center">
+            <RevealFx
+                translateY="4"
+                fillWidth
+                justifyContent="center"
+                paddingBottom="m">
+                <Heading
+                    wrap="balance"
+                    variant="display-strong-l"
+                    align="center">
+                    {home.headline}
+                </Heading>
+            </RevealFx>
+            <RevealFx
+                translateY="8"
+                delay={0.2}
+                fillWidth
+                justifyContent="center"
+                paddingBottom="m">
+                <Flex fillWidth justifyContent="center" alignItems="center">
+                    <Text
+                        align="center"
+                        wrap="balance"
+                        onBackground="neutral-weak"
+                        variant="heading-default-m">
+                        {home.subline}
+                    </Text>
+                </Flex>
+            </RevealFx>
+            <RevealFx translateY="12" delay={0.4}>
+                <Flex fillWidth justifyContent="center">
+                    <Button
+                        id="about"
+                        data-border="rounded"
+                        href={\`/\${locale}/about\`}
+                        variant="tertiary"
+                        suffixIcon="chevronRight"
+                        size="m">
+                        <Flex gap="8" alignItems="center">
+                            {about.avatar.display && (
+                                <Avatar
+                                    style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
+                                    src={person.avatar}
+                                    size="m"/>
+                            )}
+                            {t("about.title")}
+                        </Flex>
+                    </Button>
+                </Flex>
+            </RevealFx>
+        </Flex>
+    </Flex>`,
+            label: 'React Layout',
+            language: 'tsx',
+        },
+    ]}
+    copyButton
+/>
+
+### 5. Edit your Information in content.js where your config.js
+
+This step is pretty straightforward! However, more steps will be added in the future!
+
+### Conclusion
+
+With this, your landing page is done for now. I will add more steps in the future as I update my site more.
+
