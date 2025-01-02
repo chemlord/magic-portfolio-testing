@@ -122,7 +122,7 @@ export default async function RootLayout({
 					<Flex
 						zIndex={0}
 						fillWidth paddingY="l" paddingX="l"
-						justifyContent="center" flex={1}>
+						justifyContent="center">
 						<Flex
 							justifyContent="center"
 							fillWidth minHeight="0">

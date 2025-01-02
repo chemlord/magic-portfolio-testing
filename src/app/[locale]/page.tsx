@@ -108,7 +108,7 @@ export default function Home(
             align="center"
             wrap="balance"
             onBackground="neutral-weak"
-            variant="heading-default-xl">
+            variant="heading-default-l">
             {home.subline}
         </Text>
     </Flex>
@@ -120,6 +120,7 @@ export default function Home(
                     data-border="rounded"
                     href={`/${locale}/about`}
                     variant="tertiary"
+					suffixIcon="chevronRight"
                     size="m">
                     <Flex
                         gap="8"
@@ -131,7 +132,6 @@ export default function Home(
                                 size="m"/>
                         )}
                         {t("about.title")}
-                        <Arrow trigger="#about"/>
                     </Flex>
                 </Button>
             </Flex>
@@ -141,12 +141,11 @@ export default function Home(
 				
 			</Flex>
 			<RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1,1]} locale={locale}/>
-			</RevealFx>
-			<Projects range={[3]} locale={locale}/>
-			{ newsletter.display &&
+				<Projects range={[1]} locale={locale}/>
+				{ newsletter.display &&
 				<Mailchimp newsletter={newsletter} />
 			}
+			</RevealFx>
 		</Flex>
 	);
 }

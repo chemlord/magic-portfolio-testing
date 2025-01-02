@@ -13,9 +13,9 @@ const person = {
 }
 
 const newsletter = {
-    display: false,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I'm a Trent University student majoring in Biochemistry and Molecular Biology. I have a keen interest in Synthetic Organic Chemistry, particularly Carbonyl chemistry. I'm hoping to expand my knowledge into other scientific specialities. I'm also interested in Front-End Development as a hobby.</>
+    display: true,
+    title: <>Stay Updated with My Newsletter</>,
+    description: <>I'm a Biochemistry student at Trent University, passionate about Medicinal Chemistry. Join me as I share insights, discoveries, and personal reflections on science, technology, and beyond.</>
 }
 
 const social = [
