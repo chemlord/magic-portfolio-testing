@@ -108,7 +108,7 @@ export default function Home(
             align="center"
             wrap="balance"
             onBackground="neutral-weak"
-            variant="heading-default-m">
+            variant="heading-default-l">
             {home.subline}
         </Text>
     </Flex>

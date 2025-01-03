@@ -48,7 +48,7 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Academic Portfolio showcasing my work and experiences in ${person.role}`,
     headline: <>Biochemist Seeking New Possibilities</>,
-    subline: <>Hi I'm Devraj, a Biochemistry and Molecular Biology Student at <InlineCode>Trent University</InlineCode>, with a passion in Medicinal Chemistry, specifically, Drug Discovery and Design. My goal is to gain experience in Chemistry and Biology to contribute to the future of Pharmaceuticals.</>
+    subline: <>Hi I'm Devraj, a Biochemistry and Molecular Biology Student at <InlineCode>Trent University</InlineCode> deeply passionate about Medicinal Chemistry. Discover more about me below!</>
 }
 
 const about = {
@@ -69,7 +69,7 @@ const about = {
     intro: {
         display: true,
         title: 'About Me',
-        description: <>I'm a Biochemistry and Molecular Biology student at Trent University with a passion for Medicinal Chemistry, particularly Drug Discovery and Design. I’m eager to explore new frontiers in Chemistry and Biology while continually expanding my knowledge. Outside the lab, I enjoy channeling my creativity into front-end development as a fun and rewarding hobby.</>
+        description: <>Hi I'm Devraj, a Biochemistry and Molecular Biology Student at Trent University, with a passion in Medicinal Chemistry, specifically, Drug Discovery and Design. My goal is to gain experience in Chemistry and Biology to contribute to the future of Pharmaceuticals. Outside the lab, I enjoy channeling my creativity into front-end development as a fun and rewarding hobby.</>
     },
     work: {
         display: true, // set to false to hide this section
