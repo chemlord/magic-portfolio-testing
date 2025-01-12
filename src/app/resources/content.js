@@ -134,9 +134,9 @@ const about = {
                 description: <>Trent University</>,
                 timeframe: 'January 2025 – April 2025',
                 achievements: [
-                    <>Will grade student papers and reports.</>,
-                    <>Manage students in the Laboratory to perform experiments safely.</>,
-                    <>Assist students with questions regarding Lab or course content.</>,
+                    <>Assess and grade student papers and reports, providing constructive feedback to help improve their understanding and performance in the course.</>,
+                    <>Supervise students during laboratory sessions, ensuring all experiments are conducted safely and in accordance with established protocols.</>,
+                    <>Assist students with questions related to laboratory procedures, course material, and experiment concepts to foster a deeper understanding of the subject matter.</>,
 
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
@@ -153,9 +153,9 @@ const about = {
                 description: <>Whitby FC</>,
                 timeframe: 'May 2023 – September 2023',
                 achievements: [
-                    <>Ensured fair play and safety with quick decisions.</>,
-                    <>Managed game dynamics and resolved conflicts.</>,
-                    <>Improved officiating through training.</>,
+                    <>Made quick, decisive calls to ensure the integrity of the game and the safety of all participants.</>,
+                    <>Oversaw game dynamics, maintaining control of the pace and resolving disputes efficiently to keep the game running smoothly.</>,
+                    <>Participated in ongoing training and development programs to improve knowledge of rules and refine officiating techniques.</>,
                 ],
                 images: [ ]
             },
@@ -164,9 +164,9 @@ const about = {
                 description: <>Loblaws Companies Ltd</>,
                 timeframe: 'April 2021 – December 2021',
                 achievements: [
-                    <>Ensured quality operations through teamwork and strong listening skills.</>,
-                    <>Adhered to safety and workplace protocols.</>,
-                    <>Handled machinery to complete tasks.</>,
+                    <>Ensured quality operations by collaborating effectively with team members and utilizing strong communication and listening skills to meet objectives.</>,
+                    <>Maintained a safe and compliant work environment by diligently following safety guidelines and workplace protocols.</>,
+                    <>Operated and maintained machinery with care and precision, ensuring tasks were completed efficiently and to a high standard.</>,
                 ],
                 images: []
             }
@@ -178,8 +178,8 @@ const about = {
             skills: [
                 {
                     title: 'Laboratory Skills',
-                    tags: ['TLC', 'FT-IR', '¹H NMR', 'GC-MS','HPLC','IEC','SEC','UV-Vis','SDS Page','Biohazard Handling','Aseptic Techniques','Micropipetting','Reflux','SOP/WI Adherence','Separation','pH Testing','Rotary Evaporation','Buffer Preparation','Bradford Assay','Spot Assay', 'Nessler Assay', 'Dialysis'], // Tags for this skill
-                    description: <>Two years of lab experience, averaging twelve hours weekly, with expertise in TLC, FT-IR, ¹H NMR, GC-MS, HPLC, IEC, SEC, and UV-Vis spectroscopy. Skilled in aseptic techniques, biohazard handling (E. coli, katG catalase-peroxidase), safety protocols (SOPs/WIs, WHMIS), micropipetting, reflux, separations, rotary evaporation, buffer preparation, pH testing, SDS-PAGE, various Assays. Additionally, capable of managing physical tasks such as lifting and carrying (45+ pounds).</>,
+                    tags: ['TLC', 'FT-IR', '¹H NMR', 'GC-MS','HPLC','IEC','SEC','UV-Vis','SDS Page','Biohazard Handling','Aseptic Techniques','Micropipetting','Reflux','SOP/WI Adherence','Separation','pH Testing','Rotary Evaporation','Buffer Preparation','Bradford Assay','Spot Assay', 'Nessler Assay', 'Dialysis','Filtration'], // Tags for this skill
+                    description: <>Two years of lab experience, averaging twelve hours weekly, with expertise in TLC, FT-IR, ¹H NMR, GC-MS, HPLC, IEC, SEC, and UV-Vis spectroscopy. Skilled in aseptic techniques, biohazard handling (E. coli, katG catalase-peroxidase), safety protocols (SOPs/WIs, WHMIS), micropipetting, reflux, separations, rotary evaporation, buffer preparation, filtration, pH testing, SDS-PAGE, various Assays. Additionally, capable of managing physical tasks such as lifting and carrying (45+ pounds).</>,
                     // optional: leave the array empty if you don't want to display images
                 },
                 {
