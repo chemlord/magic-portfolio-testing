@@ -264,7 +264,7 @@ export default function About(
             variant="body-default-m"
             key={`${experience.company}-${index}`}
             style={{
-                marginLeft: '0.9em', // Creates space for the bullet
+                marginLeft: '1.0em', // Creates space for the bullet
                 textIndent: '0em', // Pulls the bullet outside the text flow
                 lineHeight: '1.4', // Ensures consistent spacing
             }}>
@@ -352,7 +352,7 @@ export default function About(
             variant="body-default-m"
             key={index}
             style={{
-                marginLeft: '0.9em', // Creates space for the bullet
+                marginLeft: '1.0em', // Creates space for the bullet
                 textIndent: '0em', // Pulls the bullet outside the text flow
                 lineHeight: '1.4', // Ensures consistent spacing
             }}>
