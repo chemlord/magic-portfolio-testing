@@ -335,6 +335,27 @@ const gallery = {
             caption: 'CHEM 3110 End of Year Lab',
             details: 'Taken in 2024 during my enrollment in CHEM 3110.',
         },
+        { 
+            src: '/images/gallery/Wittigcooled.jpg', 
+            alt: 'image',
+            orientation: 'vertical',
+            caption: 'Wittig Reaction Post-Crystallization',
+            details: 'Cooled in Fall 2023',
+        },
+        { 
+            src: '/images/gallery/IMG_0447.jpeg', 
+            alt: 'image',
+            orientation: 'horizontal',
+            caption: 'Nickel (II) Sulfate Hexahydrate Solutions',
+            details: 'Nickel (II) Sulfate Hexahydrate (Left), Deionized Water (Next), Solutions with Ethylene Diamine as Concentrations increasing from 0.3 to 0.9',
+        },
+        { 
+            src: '/images/gallery/IMG_0449.jpeg', 
+            alt: 'image',
+            orientation: 'vertical',
+            caption: 'All Nickel (II) Sulfate Hexahydrate Solutions',
+            details: 'All Solutions from 0.3 to 0.9',
+        },
     ]
 }
 
