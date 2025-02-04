@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, SmartImage } from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, SmartImage, Badge, LetterFx, Background, Icon, Tag } from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -77,9 +77,32 @@ export default function Home(
 			<Flex
     fillWidth
     direction="column"
-    paddingY="l"
-    gap="m"
+    paddingY="s"
+    gap="s"
     alignItems="center"> {/* Centering the entire column */}
+	<RevealFx
+    justifyContent="center"
+    alignItems="center"
+    paddingBottom="8"
+    speed="fast"
+    style={{ display: "flex", justifyContent: "center", width: "100%", fontSize: "14px" }}
+>
+<Badge 
+    href="/blog/ganaxolone-anti-seizure-medication" 
+    style={{ padding: "4px 8px", fontSize: "13px" }} // Reducing size
+>
+    <Flex alignItems="center" style={{ gap: "6px" }}> {/* Increase spacing */}
+        <Tag 
+            variant="brand"
+            size="s"
+            label="Post"
+        />
+        <LetterFx trigger="instant" speed="medium">
+            Read about Ganaxolone: An Anti-Seizure Medication
+        </LetterFx>
+    </Flex>
+</Badge>
+</RevealFx>
     <Flex
         direction="column"
         fillWidth

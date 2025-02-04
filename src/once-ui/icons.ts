@@ -35,7 +35,8 @@ import {
 	FaGithub,
 	FaLinkedin,
 	FaXTwitter,
-	FaCanadianMapleLeaf
+	FaCanadianMapleLeaf,
+	FaAtom
 } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
