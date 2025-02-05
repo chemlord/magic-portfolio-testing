@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, SmartImage, Badge, LetterFx, Background, Icon, Tag } from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, SmartImage, Badge, LetterFx, Background, Icon, Tag, Grid, Carousel} from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -77,7 +77,7 @@ export default function Home(
 			<Flex
     fillWidth
     direction="column"
-    paddingY="s"
+    paddingY="0"
     gap="s"
     alignItems="center"> {/* Centering the entire column */}
 	<RevealFx
@@ -92,7 +92,7 @@ export default function Home(
     style={{ padding: "4px 8px", fontSize: "13px" }} // Reducing size
 >
     <Flex alignItems="center" style={{ gap: "6px" }}> {/* Increase spacing */}
-        <Tag 
+        <Tag
             variant="brand"
             size="s"
             label="Post"
@@ -164,13 +164,20 @@ export default function Home(
 			
 			</Flex>
 			<RevealFx translateY="16" delay={0.6}>
-			<SmartImage
-  src="/images/projects/project-01/hopefully.png"
-  alt="Image description"
-  aspectRatio="16/9"
-  radius="l"
-  objectFit="cover"
-/>
+
+<RevealFx translateY="16" delay={0.6}>
+    <Carousel
+        aspectRatio="16 / 9"
+        indicator="line"
+        images={[
+            { alt: 'Sample image 1', src: '/images/projects/project-01/hopefully.png' },
+            { alt: 'Sample image 2', src: '/images/gallery/IMG_0447.jpeg' },
+            { alt: 'Sample image 3', src: '/images/gallery/Cyalume.jpg' }
+        ]}
+    />
+</RevealFx>
+
+
 			</RevealFx>
 			{ newsletter.display &&
 				<Mailchimp newsletter={newsletter} />
