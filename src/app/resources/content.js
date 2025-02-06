@@ -356,6 +356,13 @@ const gallery = {
             caption: 'All Nickel (II) Sulfate Hexahydrate Solutions',
             details: 'All Solutions from 0.3 to 0.9',
         },
+        { 
+            src: '/images/gallery/liquid2200.png', 
+            alt: 'image',
+            orientation: 'horizontal',
+            caption: 'Nickel (II) Complexes',
+            details: 'tris(2,2’-bipyridine)nickel(II) sulfate heptahydrate (Far Left), Hexakis(dimethylsulfoxide)nickel(II) chloride (Left), tris(ethylenediamine)nickel(II) chloride dihydrate (Right) and hexaaminenickel(II) chloride (Far Right) ',
+        },
     ]
 }
 

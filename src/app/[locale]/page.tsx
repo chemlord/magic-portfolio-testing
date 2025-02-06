@@ -171,12 +171,12 @@ export default function Home(
         indicator="line"
         images={[
             { alt: 'Sample image 1', src: '/images/projects/project-01/hopefully.png' },
-            { alt: 'Sample image 2', src: '/images/gallery/IMG_0447.jpeg' },
-            { alt: 'Sample image 3', src: '/images/gallery/Cyalume.jpg' }
+            { alt: 'Sample image 2', src: '/images/gallery/liquid2200.png' },
+            { alt: 'Sample image 3', src: '/images/gallery/IMG_0447.jpeg' },
         ]}
     />
-</RevealFx>
 
+</RevealFx>
 
 			</RevealFx>
 			{ newsletter.display &&
