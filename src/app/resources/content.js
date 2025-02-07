@@ -82,15 +82,9 @@ const about = {
                 achievements: [
                     <>Relevant Courses: Medicine and Chemistry, Adv. Synthetic Organic Chemistry Bio Applications, Calculus I & II, Introductory Chemistry I & II, Foundations of Cell and Molecular Biology, Intro Organic Chemistry I & II, Basic Research Methods & Stats</>,
                     <>Awards: Trent Entrance Scholarship 2020-21, Dean's Honour Roll 2020-21 and 2023</>,
-                    <>Clubs/Societies: Trent Hemoglobal (Co-President), Trent Varsity Fencer (2021-2022)</>,
+                    <>Clubs/Societies: Trent Varsity Fencer (2021-2022)</>,
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/gallery/hemotable1.png',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    },
                     {
                         src: '/images/projects/project-01/labphoto.png',
                         alt: 'Project image',
