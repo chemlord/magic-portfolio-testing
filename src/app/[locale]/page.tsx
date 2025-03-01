@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, SmartImage, Badge, LetterFx, Background, Icon, Tag, Grid, Carousel, Column, Row } from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, SmartImage, Badge, LetterFx, Background, Icon, Tag, Grid, Carousel, Column, Row} from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -10,13 +10,13 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 export async function generateMetadata(
-	{ params: { locale } }: { params: { locale: string } }
+	{params: {locale}}: { params: { locale: string }}
 ) {
 	const t = await getTranslations();
     const { home } = renderContent(t);
 	const title = home.title;
 	const description = home.description;
-	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(decodeURIComponent(title))}`;
+	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
 	return {
 		title,
@@ -43,12 +43,11 @@ export async function generateMetadata(
 }
 
 export default function Home(
-	{ params: { locale } }: { params: { locale: string } }
+	{ params: {locale}}: { params: { locale: string }}
 ) {
 	unstable_setRequestLocale(locale);
 	const t = useTranslations();
 	const { home, about, person, newsletter } = renderContent(t);
-
 	return (
 		<Flex
 			maxWidth="m" fillWidth gap="xl"
@@ -76,124 +75,125 @@ export default function Home(
 				}}
 			/>
 			<Flex
-				fillWidth
-				direction="column"
-				paddingY="0"
-				gap="s"
-				alignItems="center"> {/* Centering the entire column */}
-				<RevealFx
-					justifyContent="center"
-					alignItems="center"
-					paddingBottom="8"
-					speed="fast"
-					style={{ display: "flex", justifyContent: "center", width: "100%", fontSize: "14px" }}
-				>
-					<Badge 
-						href="/blog/ganaxolone-anti-seizure-medication" 
-						style={{ padding: "4px 8px", fontSize: "13px" }} // Reducing size
-					>
-						<Flex alignItems="center" style={{ gap: "6px" }}> {/* Increase spacing */}
-							<Tag
-								variant="brand"
-								size="s"
-								label="Post"
-							/>
-							<LetterFx trigger="instant" speed="medium">
-								Read about Ganaxolone: An Anti-Seizure Medication
-							</LetterFx>
-						</Flex>
-					</Badge>
-				</RevealFx>
-				<Flex
-					direction="column"
-					fillWidth
-					maxWidth="s"
-					alignItems="center"> {/* Centering content in the inner column */}
-					<RevealFx
-						translateY="4"
-						fillWidth
-						justifyContent="center"
-						paddingBottom="m">
-						<Heading
-							wrap="balance"
-							variant="display-strong-l"
-							align="center"> {/* Center align text */}
-							{home.headline}
-						</Heading>
-					</RevealFx>
-					<RevealFx
-						translateY="8"
-						delay={0.2}
-						fillWidth
-						justifyContent="center"
-						paddingBottom="m">
-						<Flex fillWidth justifyContent="center" alignItems="center"> {/* Ensures horizontal centering */}
-							<Text
-								align="center"
-								wrap="balance"
-								onBackground="neutral-weak"
-								variant="heading-default-l"
-								suppressHydrationWarning
-								style={{ width: "100%", textAlign: "center" }}
-							>
-								{home.subline}
-							</Text>
-						</Flex>
+    fillWidth
+    direction="column"
+    paddingY="0"
+    gap="s"
+    alignItems="center"> {/* Centering the entire column */}
+	<RevealFx
+    justifyContent="center"
+    alignItems="center"
+    paddingBottom="8"
+    speed="fast"
+    style={{ display: "flex", justifyContent: "center", width: "100%", fontSize: "14px" }}
+>
+<Badge 
+    href="/blog/ganaxolone-anti-seizure-medication" 
+    style={{ padding: "4px 8px", fontSize: "13px" }} // Reducing size
+>
+    <Flex alignItems="center" style={{ gap: "6px" }}> {/* Increase spacing */}
+        <Tag
+            variant="brand"
+            size="s"
+            label="Post"
+        />
+        <LetterFx trigger="instant" speed="medium">
+            Read about Ganaxolone: An Anti-Seizure Medication
+        </LetterFx>
+    </Flex>
+</Badge>
+</RevealFx>
+    <Flex
+        direction="column"
+        fillWidth
+        maxWidth="s"
+        alignItems="center"> {/* Centering content in the inner column */}
+        <RevealFx
+            translateY="4"
+            fillWidth
+            justifyContent="center"
+            paddingBottom="m">
+            <Heading
+                wrap="balance"
+                variant="display-strong-l"
+                align="center"> {/* Center align text */}
+                {home.headline}
+            </Heading>
+        </RevealFx>
+        <RevealFx
+    translateY="8"
+    delay={0.2}
+    fillWidth
+    justifyContent="center"
+    paddingBottom="m">
+    <Flex fillWidth justifyContent="center" alignItems="center"> {/* Ensures horizontal centering */}
+        <Text
+            align="center"
+            wrap="balance"
+            onBackground="neutral-weak"
+            variant="heading-default-l">
+            {home.subline}
+        </Text>
+    </Flex>
 
-						<RevealFx
-							speed="fast"
-							align="center"
-							delay={0.4}
-							translateY="12"
-							marginTop="24"
-							marginBottom="0"
-							onBackground="accent-medium"
-						>
-							Discover More about Me Below!
-						</RevealFx>
+    <Flex>
+        <RevealFx
+          speed="fast"
+          align="center"
+          delay={0.4}
+          translateY="12"
+          marginTop="24"
+          marginBottom="0"
+          onBackground="accent-medium"
+        >
+          Discover More about Me Below!
+        </RevealFx>
+        </Flex>
 
-					</RevealFx>
-					<RevealFx translateY="12" delay={0.4}>
-						<Flex fillWidth justifyContent="center">
-							<Button
-								id="about"
-								data-border="rounded"
-								href={`/${locale}/about`}
-								variant="tertiary"
-								suffixIcon="chevronRight"
-								size="m">
-								<Flex
-									gap="8"
-									alignItems="center">
-									{about.avatar.display && (
-										<Avatar
-											style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
-											src={person.avatar}
-											size="m"/>
-									)}
-									{t("about.title")}
-								</Flex>
-							</Button>
-						</Flex>
-					</RevealFx>
-				</Flex>
+</RevealFx>
+        <RevealFx translateY="12" delay={0.4}>
+            <Flex fillWidth justifyContent="center">
+                <Button
+                    id="about"
+                    data-border="rounded"
+                    href={`/${locale}/about`}
+                    variant="tertiary"
+					suffixIcon="chevronRight"
+                    size="m">
+                    <Flex
+                        gap="8"
+                        alignItems="center">
+                        {about.avatar.display && (
+                            <Avatar
+                                style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
+                                src={person.avatar}
+                                size="m"/>
+                        )}
+                        {t("about.title")}
+                    </Flex>
+                </Button>
+            </Flex>
+        </RevealFx>
+    </Flex>
+
 			</Flex>
 			<RevealFx translateY="16" delay={0.6}>
 
-				<RevealFx translateY="16" delay={0.6}>
-					<Carousel
-						aspectRatio="16 / 9"
-						indicator="line"
-						images={[
-							{ alt: 'Sample image 1', src: '/images/projects/project-01/hopefully.png' },
-							{ alt: 'Sample image 2', src: '/images/gallery/liquid2200.png' },
-							{ alt: 'Sample image 3', src: '/images/gallery/IMG_0447.jpeg' },
-						]}
-					/>
-				</RevealFx>
+<RevealFx translateY="16" delay={0.6}>
+    <Carousel
+        aspectRatio="16 / 9"
+        indicator="line"
+        images={[
+            { alt: 'Sample image 1', src: '/images/projects/project-01/hopefully.png' },
+            { alt: 'Sample image 2', src: '/images/gallery/liquid2200.png' },
+            { alt: 'Sample image 3', src: '/images/gallery/IMG_0447.jpeg' },
+        ]}
+    />
+
+</RevealFx>
 
 			</RevealFx>
-			{newsletter.display &&
+			{ newsletter.display &&
 				<Mailchimp newsletter={newsletter} />
 			}
 		</Flex>
