@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, SmartImage, Badge, LetterFx, Background, Icon, Tag, Grid, Carousel} from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, SmartImage, Badge, LetterFx, Background, Icon, Tag, Grid, Carousel, Column, Row} from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -135,6 +135,19 @@ export default function Home(
             {home.subline}
         </Text>
     </Flex>
+
+        <RevealFx
+          speed="fast"
+          align="center"
+          delay={0.4}
+          translateY="12"
+          marginTop="24"
+          marginBottom="0"
+          onBackground="accent-medium"
+        >
+          Discover More about Me Below!
+        </RevealFx>
+
 </RevealFx>
         <RevealFx translateY="12" delay={0.4}>
             <Flex fillWidth justifyContent="center">
@@ -161,7 +174,6 @@ export default function Home(
         </RevealFx>
     </Flex>
 
-			
 			</Flex>
 			<RevealFx translateY="16" delay={0.6}>
 

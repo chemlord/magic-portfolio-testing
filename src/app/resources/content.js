@@ -48,7 +48,7 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Academic Portfolio showcasing my work and experiences in ${person.role}`,
     headline: <>Biochemist Seeking New Possibilities</>,
-    subline: <>Hi I'm Devraj, a Biochemistry and Molecular Biology Student at <InlineCode>Trent University</InlineCode> deeply passionate about Medicinal Chemistry. Discover more about me below!</>
+    subline: <>I'm Devraj, a Biochemistry and Molecular Biology Student at <InlineCode>Trent University</InlineCode> deeply passionate about Medicinal and Pharmaceutical Chemistry.</>
 }
 
 const about = {
