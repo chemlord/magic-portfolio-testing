@@ -78,7 +78,7 @@ export default function Home(
                 fillWidth
                 direction="column"
                 paddingY="0"
-                gap="s"
+                gap="xs"
                 alignItems="center">
                 <RevealFx
                     justifyContent="center"
@@ -147,7 +147,7 @@ export default function Home(
                             align="center"
                             delay={0.4}
                             translateY="12"
-                            marginTop="8"
+                            marginTop="2"
                             marginBottom="0"
                             onBackground="accent-medium"
                         >
@@ -155,7 +155,7 @@ export default function Home(
                         </RevealFx>
                     </Flex>
 
-                    <RevealFx translateY="12" delay={0.4}>
+                    <RevealFx translateY="12" delay={0.4} marginTop="24">
                         <Flex fillWidth justifyContent="center">
                             <Button
                                 id="about"
