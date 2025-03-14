@@ -13,7 +13,7 @@ export async function generateMetadata(
 
 	const title = gallery.title;
 	const description = gallery.description;
-	const ogImage = `/images/projects/project-01/hopefully.png`;
+	const ogImage = `public/images/projects/project-01/hopefully.png`;
 
 	return {
 		title,
