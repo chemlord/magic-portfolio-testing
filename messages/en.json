@@ -8,7 +8,7 @@
         "button": "Sign up"
     },
     "home": {
-        "label": "Home",
+        "label": "About",
         "title": "{name}'s Portfolio",
         "description": "Portfolio website showcasing my work as a {role}",
         "headline": "Design engineer and builder",

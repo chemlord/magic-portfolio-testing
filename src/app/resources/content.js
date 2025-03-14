@@ -44,7 +44,7 @@ const social = [
 ]
 
 const home = {
-    label: 'Home',
+    label: 'About',
     title: `${person.name}'s Portfolio`,
     description: `Academic Portfolio showcasing my work and experiences in ${person.role}`,
     headline: <>Biochemist Seeking New Possibilities</>,
@@ -344,11 +344,11 @@ const gallery = {
             details: 'Nickel (II) Sulfate Hexahydrate (Left), Deionized Water (Next), Solutions with Ethylene Diamine as Concentrations increasing from 0.3 to 0.9',
         },
         { 
-            src: '/images/gallery/IMG_0449.jpeg', 
+            src: '/images/gallery/reflux2200-2.png', 
             alt: 'image',
             orientation: 'vertical',
-            caption: 'All Nickel (II) Sulfate Hexahydrate Solutions',
-            details: 'All Solutions from 0.3 to 0.9',
+            caption: 'Synthesis of H2Ti(cat)3',
+            details: 'Synthesis was performed through a Inert atmosphere reflux for 1 hour.',
         },
         { 
             src: '/images/gallery/liquid2200.png', 
@@ -356,6 +356,20 @@ const gallery = {
             orientation: 'horizontal',
             caption: 'Nickel (II) Complexes',
             details: 'tris(2,2’-bipyridine)nickel(II) sulfate heptahydrate (Far Left), Hexakis(dimethylsulfoxide)nickel(II) chloride (Left), tris(ethylenediamine)nickel(II) chloride dihydrate (Right) and hexaaminenickel(II) chloride (Far Right) ',
+        },
+        { 
+            src: '/images/gallery/reflux2200-1.png', 
+            alt: 'image',
+            orientation: 'vertical',
+            caption: 'Preparing for Reflux (Non-Fumehood).',
+            details: 'Preparation of Tin (IV) iodide.',
+        },
+        { 
+            src: '/images/gallery/IMG_0449.jpeg', 
+            alt: 'image',
+            orientation: 'horizontal',
+            caption: 'All Nickel (II) Sulfate Hexahydrate Solutions',
+            details: 'All Solutions from 0.3 to 0.9',
         },
     ]
 }

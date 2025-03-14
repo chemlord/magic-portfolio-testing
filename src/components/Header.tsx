@@ -111,7 +111,7 @@ export const Header = () => {
                         <Flex gap="4" textVariant="body-default-s">
                             {routes["/"] && (
                                 <ToggleButton
-                                    prefixIcon="home"
+                                    prefixIcon="person"
                                     href={`/${params?.locale}`}
                                     selected={pathname === "/"}
                                 >
